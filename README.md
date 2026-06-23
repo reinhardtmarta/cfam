@@ -24,13 +24,33 @@ This software is currently an experimental Proof of Concept (PoC). It is designe
 ## Verification
 To ensure the integrity of the downloaded binary, verify its SHA-256 checksum against the values provided in the official GitHub Releases page.
 
+## Filter Contract & Validation Rules
+CFAM inspects incoming string payloads via strict structural analysis. It evaluates data against three non-probabilistic criteria:
+
+1. **Structural Integrity:** Detects and blocks truncated payloads or broken formatting (e.g., incomplete strings or unclosed markers).
+2. **Boundary Enforcement:** Rejects payloads that exceed structural length constraints or contain invalid control characters.
+3. **Anomaly Rejection:** Blocks payloads containing known adversarial structures or system-level escape sequences.
+
+### Example
+* **Accepted Input:** A complete, well-formed payload that strictly respects formatting boundaries. (System returns `Exit Code: 0`).
+* **Rejected Input:** Truncated AI responses, unclosed delimiters, or malformed data streams. (System blocks execution and returns `Exit Code: 1`).
+
+  ## Architectural Decisions
+* **Engineed in Rust:** Built strictly for memory safety, low latency, and predictable resource allocation.
+  
+* **Zero Runtime Dependencies:** Distributed as a statically compiled binary. It runs entirely isolated from interpreters, virtual machines, or external package managers, reducing the system's attack surface.
+* 
 ## Usage
 CFAM operates as a standalone binary executable.
+cfam_audit_ledger.log
 
 ```bash
 ./cfam "Your input or task description"
 ```
 
+## Author & Support
+Developed by Marta Reinhardt
+For verification, security inquiries, or bug reports regarding the compiled binary, please use the official GitHub repository issue tracker.
 
  Copyright © 2026 Marta
 
