@@ -36,7 +36,7 @@ CFAM inspects incoming string payloads via strict structural analysis. It evalua
 * **Rejected Input:** Truncated AI responses, unclosed delimiters, or malformed data streams. (System blocks execution and returns `Exit Code: 1`).
 
   ## Architectural Decisions
-* **Engineed in Rust:** Built strictly for memory safety, low latency, and predictable resource allocation.
+* **Development in Rust:** Built strictly for memory safety, low latency, and predictable resource allocation.
   
 * **Zero Runtime Dependencies:** Distributed as a statically compiled binary. It runs entirely isolated from interpreters, virtual machines, or external package managers, reducing the system's attack surface.
 * 
