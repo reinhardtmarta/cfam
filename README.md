@@ -15,8 +15,9 @@ AI models generate probabilistic and unpredictable responses. CFAM solves this b
 CFAM operates as a standalone binary executable.
 
 ```bash
-./cfam "Your input or task description"
+./cfam "Your input or task description" ```
 
-Copyright © 2026 Marta
+
+ Copyright © 2026 Marta
 
 All Rights Reserved.
