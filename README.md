@@ -16,3 +16,7 @@ CFAM operates as a standalone binary executable.
 
 ```bash
 ./cfam "Your input or task description"
+
+Copyright © 2026 Marta
+
+All Rights Reserved.
