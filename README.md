@@ -21,6 +21,8 @@ CFAM provides a hard security layer for AI integrations by addressing vulnerabil
 ## Status: Proof of Concept (PoC)
 This software is currently an experimental Proof of Concept (PoC). It is designed strictly for research, testing, and evaluation purposes. At this stage, the system prioritizes logical enforcement and data integrity over high-scale distributed performance.
 
+## Verification
+To ensure the integrity of the downloaded binary, verify its SHA-256 checksum against the values provided in the official GitHub Releases page.
 
 ## Usage
 CFAM operates as a standalone binary executable.
